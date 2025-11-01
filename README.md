@@ -100,7 +100,20 @@ Applied XAI methods for global and local model explainability:
 - **Tools:** Jupyter Notebook, VS Code, GitHub  
 
 ---
-
+## 📂 Project Structure
+```plaintext
+client-potential-prediction-XAI/
+│
+├── data/                # (Dataset omitted for confidentiality)
+├── notebooks/
+│    ├── 01_data_preprocessing.ipynb
+│    ├── 02_model_training.ipynb
+│    ├── 03_model_evaluation.ipynb
+│    ├── 04_XAI_analysis.ipynb
+├── results/             # Plots and figures
+├── models/              # Saved trained models (.pkl)
+├── requirements.txt
+└── README.md
 ---
 
 
