@@ -1,10 +1,10 @@
-# 🧩 Client Potential Prediction using Machine Learning and Explainable AI
+# Client Potential Prediction using Machine Learning and Explainable AI
 
 This repository contains my Master’s research project — developing a **multi-class classification model** to predict client potential levels (High, Medium, Low, None) in **B2B IT sales** using **machine learning** and **Explainable AI (XAI)** techniques.
 
 ---
 
-## 🎯 Project Overview
+## Project Overview
 In B2B IT solution sales, the sales cycle is long and complex. Sales teams often struggle to identify which leads have the highest potential to convert.  
 This project applies **data-driven machine learning** methods to score and classify client potential, enabling better sales prioritization and resource allocation.
 
@@ -12,14 +12,14 @@ The project integrates **Explainable AI (XAI)** techniques to make the model tra
 
 ---
 
-## 🧠 Research Objectives
+##  Research Objectives
 1. Build a **supervised ML model** to predict client potential levels.  
 2. Identify which features most influence the model’s predictions.  
 3. Provide **interpretable, explainable insights** to support data-driven sales strategies.
 
 ---
 
-## 📊 Dataset Overview
+## Dataset Overview
 | Attribute Type | Features | Examples |
 |----------------|-----------|-----------|
 | Non-Ordinal | Company Size, Required Service, Quotation Type, Meeting Type, Contact Person Role | “SME”, “Corporate”, “NGO” |
@@ -27,12 +27,12 @@ The project integrates **Explainable AI (XAI)** techniques to make the model tra
 | Numerical | Budget in USD | 5000, 15000 |
 | Target | Potential Label | “High”, “Medium”, “Low”, “None” |
 
-📈 **Dataset size:** 700 records, 14 features  
-⚠️ **Dataset privacy:** Due to company confidentiality, the dataset is not shared.  
+ **Dataset size:** 700 records, 14 features  
+**Dataset privacy:** Due to company confidentiality, the dataset is not shared.  
 
 ---
 
-## ⚙️ Methodology
+## Methodology
 
 ### Step 1: Data Preprocessing
 - Cleaned column names and handled missing values (mean imputation).  
@@ -53,7 +53,7 @@ Tested several algorithms:
 - KNN  
 - Logistic Regression  
 
-✅ **Best Models:**  
+ **Best Models:**  
 - Gradient Boosting: 0.747 accuracy  
 - LightGBM: 0.743 accuracy  
 - Random Forest: 0.742 accuracy  
@@ -68,7 +68,7 @@ Applied XAI methods for global and local model explainability:
 
 ---
 
-## 📈 Key Findings
+##  Key Findings
 | Feature | Insight |
 |----------|----------|
 | **Budget in USD** | Strong positive correlation (r = 0.675) with client potential |
@@ -79,14 +79,14 @@ Applied XAI methods for global and local model explainability:
 
 ---
 
-## 💬 Explainability Insights
+##  Explainability Insights
 - **SHAP Summary Plot:** Reveals global influence of features.  
 - **LIME Explanation:** Shows why an individual client was classified as low or high potential.  
 - **PDP / ICE:** Demonstrates how increasing budget or engagement affects conversion likelihood.  
 
 ---
 
-## 💡 Business Insights
+##  Business Insights
 - **Budget and engagement** are the strongest conversion indicators.  
 - Focus on **SME clients** with medium budgets and strong engagement.  
 - Prioritize **high-urgency** leads for quicker follow-ups.  
@@ -94,13 +94,13 @@ Applied XAI methods for global and local model explainability:
 
 ---
 
-## 🧰 Tech Stack
+##  Tech Stack
 - **Languages:** Python  
 - **Libraries:** pandas, numpy, scikit-learn, pycaret, shap, lime, matplotlib, seaborn, lightgbm, xgboost  
 - **Tools:** Jupyter Notebook, VS Code, GitHub  
 
 ---
-## 📂 Project Structure
+##  Project Structure
 ```plaintext
 client-potential-prediction-XAI/
 │
