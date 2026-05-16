@@ -97,7 +97,7 @@ Applied XAI methods for global and local model explainability:
 ##  Tech Stack
 - **Languages:** Python  
 - **Libraries:** pandas, numpy, scikit-learn, pycaret, shap, lime, matplotlib, seaborn, lightgbm, xgboost  
-- **Tools:** Jupyter Notebook, VS Code, GitHub  
+- **Tools:** Google Colab, Jupyter Notebook, VS Code, GitHub  
 
 ---
 ##  Project Structure
