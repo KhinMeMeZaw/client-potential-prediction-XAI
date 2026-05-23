@@ -1,10 +1,5 @@
 #  Client Potential Prediction using Machine Learning & Explainable AI
 
-![Python](https://img.shields.io/badge/Python-3.10-blue?logo=python)
-![PyCaret](https://img.shields.io/badge/PyCaret-3.x-orange)
-![SHAP](https://img.shields.io/badge/XAI-SHAP%20%7C%20LIME%20%7C%20PDP%20%7C%20ICE-green)
-![Status](https://img.shields.io/badge/Status-MSc%20Thesis%20In%20Progress-yellow)
-![License](https://img.shields.io/badge/License-Academic-lightgrey)
 
 > **MSc Thesis Project** — Mae Fah Luang University, Digital Transformation Technology (2024–Present)  
 > **Author:** Khin Me Me Zaw | [LinkedIn](https://www.linkedin.com/in/khin-me-me-zaw-a8356317b/) | [GitHub](https://github.com/KhinMeMeZaw)
