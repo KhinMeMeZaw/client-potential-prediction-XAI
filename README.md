@@ -1,119 +1,184 @@
-# Client Potential Prediction using Machine Learning and Explainable AI
+# 🎯 Client Potential Prediction using Machine Learning & Explainable AI
 
-This repository contains my Master’s research project — developing a **multi-class classification model** to predict client potential levels (High, Medium, Low, None) in **B2B IT sales** using **machine learning** and **Explainable AI (XAI)** techniques.
+![Python](https://img.shields.io/badge/Python-3.10-blue?logo=python)
+![PyCaret](https://img.shields.io/badge/PyCaret-3.x-orange)
+![SHAP](https://img.shields.io/badge/XAI-SHAP%20%7C%20LIME%20%7C%20PDP%20%7C%20ICE-green)
+![Status](https://img.shields.io/badge/Status-MSc%20Thesis%20In%20Progress-yellow)
+![License](https://img.shields.io/badge/License-Academic-lightgrey)
 
----
-
-## Project Overview
-In B2B IT solution sales, the sales cycle is long and complex. Sales teams often struggle to identify which leads have the highest potential to convert.  
-This project applies **data-driven machine learning** methods to score and classify client potential, enabling better sales prioritization and resource allocation.
-
-The project integrates **Explainable AI (XAI)** techniques to make the model transparent and interpretable for business users.
-
----
-
-##  Research Objectives
-1. Build a **supervised ML model** to predict client potential levels.  
-2. Identify which features most influence the model’s predictions.  
-3. Provide **interpretable, explainable insights** to support data-driven sales strategies.
+> **MSc Thesis Project** — Mae Fah Luang University, Digital Transformation Technology (2024–Present)  
+> **Author:** Khin Me Me Zaw | [LinkedIn](https://www.linkedin.com/in/khin-me-me-zaw-a8356317b/) | [GitHub](https://github.com/KhinMeMeZaw)
 
 ---
 
-## Dataset Overview
-| Attribute Type | Features | Examples |
-|----------------|-----------|-----------|
-| Non-Ordinal | Company Size, Required Service, Quotation Type, Meeting Type, Contact Person Role | “SME”, “Corporate”, “NGO” |
-| Ordinal | Engagement Level, Urgency Level | “Low”, “Medium”, “High” |
-| Numerical | Budget in USD | 5000, 15000 |
-| Target | Potential Label | “High”, “Medium”, “Low”, “None” |
+## 📌 Project Summary
 
- **Dataset size:** 700 records, 14 features  
-**Dataset privacy:** Due to company confidentiality, the dataset is not shared.  
+In B2B IT sales, identifying which leads have the highest conversion potential is costly and time-consuming. Sales teams often rely on intuition, leading to missed opportunities and wasted resources.
 
----
+This project builds a **multi-class classification model** that predicts client potential levels — **High, Medium, Low, or None** — using real CRM and sales data from a B2B IT company. It combines machine learning with **Explainable AI (XAI)** methods so that predictions are not just accurate, but **interpretable and actionable** for business decision-makers.
 
-## Methodology
-
-### Step 1: Data Preprocessing
-- Cleaned column names and handled missing values (mean imputation).  
-- Applied:
-  - **One-Hot Encoding** for categorical variables  
-  - **Ordinal Encoding** for Engagement and Urgency levels  
-  - **Min-Max Scaling** for normalization  
-- Addressed class imbalance using **SMOTE** and **ADASYN** for comparison.  
-
-### Step 2: Model Training
-Tested several algorithms:
-- Random Forest  
-- XGBoost  
-- LightGBM  
-- Gradient Boosting  
-- Decision Tree  
-- SVM  
-- KNN  
-- Logistic Regression  
-
- **Best Models:**  
-- Gradient Boosting: 0.747 accuracy  
-- LightGBM: 0.743 accuracy  
-- Random Forest: 0.742 accuracy  
-(using 10-Fold Cross Validation)
-
-### Step 3: Explainable AI (XAI)
-Applied XAI methods for global and local model explainability:
-- **Feature Importance** (from top 3 models)  
-- **LIME** – Local Interpretable Model-Agnostic Explanations  
-- **SHAP** – Shapley Additive Explanations  
-- **PDP & ICE** – Partial Dependence and Individual Conditional Expectation plots  
+**Why this matters:**
+- Sales teams can prioritize high-potential leads faster
+- Managers get data-backed justification for resource allocation
+- XAI outputs translate model decisions into plain business language
 
 ---
 
-##  Key Findings
-| Feature | Insight |
-|----------|----------|
-| **Budget in USD** | Strong positive correlation (r = 0.675) with client potential |
-| **Engagement Level** | Higher engagement → higher potential |
-| **Urgency Level** | High urgency → higher likelihood of conversion |
-| **Required Service** | “Website” and “Other IT services” have highest high-potential clients |
-| **Contact Person Role** | CEOs and IT Teams often lead to higher potential |
+## 🗂️ Project Structure
 
----
-
-##  Explainability Insights
-- **SHAP Summary Plot:** Reveals global influence of features.  
-- **LIME Explanation:** Shows why an individual client was classified as low or high potential.  
-- **PDP / ICE:** Demonstrates how increasing budget or engagement affects conversion likelihood.  
-
----
-
-##  Business Insights
-- **Budget and engagement** are the strongest conversion indicators.  
-- Focus on **SME clients** with medium budgets and strong engagement.  
-- Prioritize **high-urgency** leads for quicker follow-ups.  
-- Strengthen executive-level engagement (CEOs, IT Teams).  
-
----
-
-##  Tech Stack
-- **Languages:** Python  
-- **Libraries:** pandas, numpy, scikit-learn, pycaret, shap, lime, matplotlib, seaborn, lightgbm, xgboost  
-- **Tools:** Google Colab, Jupyter Notebook, VS Code, GitHub  
-
----
-##  Project Structure
-```plaintext
+```
 client-potential-prediction-XAI/
 │
-├── data/                # (Dataset omitted for confidentiality)
+├── data/                          # Dataset (omitted — company confidential)
 ├── notebooks/
-│    ├── 01_data_preprocessing.ipynb
-│    ├── 02_model_training.ipynb
-│    ├── 03_model_evaluation.ipynb
-│    ├── 04_XAI_analysis.ipynb
-├── results/             # Plots and figures
-├── models/              # Saved trained models (.pkl)
-├── requirements.txt
+│   ├── 01_data_preprocessing.ipynb    # Cleaning, encoding, scaling, SMOTE/ADASYN
+│   ├── 02_model_training.ipynb        # PyCaret AutoML + manual tuning
+│   ├── 03_model_evaluation.ipynb      # Cross-validation, confusion matrix, metrics
+│   └── 04_XAI_analysis.ipynb          # SHAP, LIME, PDP, ICE explanations
+├── models/                        # Saved .pkl model files
+├── results/                       # Charts, plots, XAI outputs
+├── presentation/                  # Thesis slides
+├── references/                    # Research papers & citations
 └── README.md
+```
+
 ---
 
+## 📊 Dataset
 
+| Attribute | Details |
+|---|---|
+| Records | 700 client interactions |
+| Features | 14 (categorical, ordinal, numerical) |
+| Target | Client Potential: `High` / `Medium` / `Low` / `None` |
+| Source | Real B2B IT company CRM data (anonymized) |
+
+**Key features used:**
+
+| Type | Features |
+|---|---|
+| Categorical | Company Size, Required Service, Quotation Type, Meeting Type, Contact Person Role |
+| Ordinal | Engagement Level, Urgency Level |
+| Numerical | Budget (USD) |
+
+> ⚠️ Raw dataset not included due to company confidentiality agreement.
+
+---
+
+## ⚙️ Methodology
+
+### Pipeline Overview
+
+```
+Raw CRM Data
+    │
+    ▼
+Data Cleaning & Preprocessing
+(Missing values → One-Hot / Ordinal Encoding → Min-Max Scaling)
+    │
+    ▼
+Class Imbalance Handling
+(SMOTE vs ADASYN — compared for best performance)
+    │
+    ▼
+Model Training & Comparison (PyCaret AutoML)
+(Random Forest · LightGBM · Gradient Boosting · XGBoost · SVM · KNN · LR)
+    │
+    ▼
+10-Fold Cross Validation + Hyperparameter Tuning
+    │
+    ▼
+Explainable AI (XAI) Analysis
+(Feature Importance · SHAP · LIME · PDP · ICE)
+    │
+    ▼
+Business Insights & Recommendations
+```
+
+---
+
+## 🏆 Model Results
+
+| Model | Accuracy | Notes |
+|---|---|---|
+| **Gradient Boosting** | **74.7%** | Best overall |
+| LightGBM | 74.3% | Best speed/accuracy trade-off |
+| Random Forest | 74.2% | Most interpretable baseline |
+| XGBoost | ~73% | Strong but slower |
+| Others (SVM, KNN, LR) | < 70% | Less suitable for this data |
+
+> Evaluation: 10-Fold Stratified Cross Validation | Metrics: Accuracy, F1-Score, Precision, Recall
+
+---
+
+## 🔍 Explainable AI (XAI) Results
+
+| Method | Scope | Key Output |
+|---|---|---|
+| **Feature Importance** | Global | Top features ranked by model weight |
+| **SHAP** | Global + Local | How each feature pushes prediction up or down |
+| **LIME** | Local | Why *this specific client* got classified as High/Low |
+| **PDP** | Global | How budget or engagement level affects outcome across all clients |
+| **ICE** | Local | How the relationship varies per individual client |
+
+---
+
+## 💡 Key Business Insights
+
+| Finding | Business Action |
+|---|---|
+| **Budget** is the #1 predictor (r = 0.675 with potential) | Focus prospecting on clients with adequate budget signals |
+| **Engagement Level** strongly predicts conversion | Invest in nurturing medium-engagement leads before they go cold |
+| **Urgency Level** correlates with faster sales cycles | Prioritize high-urgency leads for immediate follow-up |
+| **Contact Person Role** matters — CEOs & IT Leads convert best | Target decision-makers, not just coordinators |
+| **Website & IT Services** clients have highest High-potential rate | Tailor pitches for these service categories |
+
+---
+
+## 🛠️ Tech Stack
+
+| Category | Tools |
+|---|---|
+| Language | Python 3.10 |
+| ML Framework | PyCaret, Scikit-learn |
+| Algorithms | LightGBM, XGBoost, Gradient Boosting, Random Forest |
+| XAI | SHAP, LIME, PDPbox |
+| Imbalance Handling | imbalanced-learn (SMOTE, ADASYN) |
+| Visualization | Matplotlib, Seaborn |
+| Environment | Google Colab, Jupyter Notebook |
+| Version Control | Git, GitHub |
+
+---
+
+## 🚀 How to Run
+
+```bash
+# 1. Clone the repo
+git clone https://github.com/KhinMeMeZaw/client-potential-prediction-XAI.git
+cd client-potential-prediction-XAI
+
+# 2. Install dependencies
+pip install -r requirements.txt
+
+# 3. Open notebooks in order
+# Start with: notebooks/01_data_preprocessing.ipynb
+```
+
+> Note: The original dataset is confidential. You can substitute any B2B CRM-style dataset with similar feature types to replicate the workflow.
+
+---
+
+## 📁 About the Author
+
+**Khin Me Me Zaw**
+- MSc Digital Transformation Technology, Mae Fah Luang University (2024–Present)
+- B.C.Sc Business Information Systems, University of Information Technology (2014–2019)
+- Google Data Analytics & Google AI Essentials Certified
+- 3+ years experience in data analysis and business development
+
+📧 kmezaw1998@gmail.com  
+🔗 [LinkedIn](https://www.linkedin.com/in/khin-me-me-zaw-a8356317b/) | [GitHub](https://github.com/KhinMeMeZaw)
+
+---
+
+*This project is part of an MSc thesis. All business data has been anonymized. Research conducted under academic supervision at Mae Fah Luang University.*
