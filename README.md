@@ -1,4 +1,4 @@
-# 🎯 Client Potential Prediction using Machine Learning & Explainable AI
+#  Client Potential Prediction using Machine Learning & Explainable AI
 
 ![Python](https://img.shields.io/badge/Python-3.10-blue?logo=python)
 ![PyCaret](https://img.shields.io/badge/PyCaret-3.x-orange)
@@ -11,7 +11,7 @@
 
 ---
 
-## 📌 Project Summary
+##  Project Summary
 
 In B2B IT sales, identifying which leads have the highest conversion potential is costly and time-consuming. Sales teams often rely on intuition, leading to missed opportunities and wasted resources.
 
@@ -24,7 +24,7 @@ This project builds a **multi-class classification model** that predicts client 
 
 ---
 
-## 🗂️ Project Structure
+## Project Structure
 
 ```
 client-potential-prediction-XAI/
@@ -44,7 +44,7 @@ client-potential-prediction-XAI/
 
 ---
 
-## 📊 Dataset
+## Dataset
 
 | Attribute | Details |
 |---|---|
@@ -61,11 +61,11 @@ client-potential-prediction-XAI/
 | Ordinal | Engagement Level, Urgency Level |
 | Numerical | Budget (USD) |
 
-> ⚠️ Raw dataset not included due to company confidentiality agreement.
+> Raw dataset not included due to company confidentiality agreement.
 
 ---
 
-## ⚙️ Methodology
+##  Methodology
 
 ### Pipeline Overview
 
@@ -97,7 +97,7 @@ Business Insights & Recommendations
 
 ---
 
-## 🏆 Model Results
+##  Model Results
 
 | Model | Accuracy | Notes |
 |---|---|---|
@@ -111,7 +111,7 @@ Business Insights & Recommendations
 
 ---
 
-## 🔍 Explainable AI (XAI) Results
+##  Explainable AI (XAI) Results
 
 | Method | Scope | Key Output |
 |---|---|---|
@@ -123,7 +123,7 @@ Business Insights & Recommendations
 
 ---
 
-## 💡 Key Business Insights
+##  Key Business Insights
 
 | Finding | Business Action |
 |---|---|
@@ -135,7 +135,7 @@ Business Insights & Recommendations
 
 ---
 
-## 🛠️ Tech Stack
+##  Tech Stack
 
 | Category | Tools |
 |---|---|
@@ -150,7 +150,7 @@ Business Insights & Recommendations
 
 ---
 
-## 🚀 How to Run
+##  How to Run
 
 ```bash
 # 1. Clone the repo
@@ -168,7 +168,7 @@ pip install -r requirements.txt
 
 ---
 
-## 📁 About the Author
+##  About the Author
 
 **Khin Me Me Zaw**
 - MSc Digital Transformation Technology, Mae Fah Luang University (2024–Present)
